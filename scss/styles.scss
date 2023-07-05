@@ -45,7 +45,7 @@ body {
     }
 
     &__menu-item {
-        padding: 24px 0;
+        
     }
 
     &__menu-link {
@@ -54,6 +54,7 @@ body {
         font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        padding: 24px 0;
 
         &:hover,
         &:focus {

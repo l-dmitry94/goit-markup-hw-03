@@ -76,15 +76,13 @@ body {
   display: flex;
   gap: 40px;
 }
-.header__menu-item {
-  padding: 24px 0;
-}
 .header__menu-link {
   color: var(--navyblue);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 .header__menu-link:hover, .header__menu-link:focus {
   color: var(--ocean);
