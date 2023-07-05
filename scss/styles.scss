@@ -24,16 +24,29 @@ body {
 .header {
     border-bottom: 1px solid var(--cornflower);
 
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-    &__nav {}
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
 
     &__logo-color {
         color: var(--navyblue);
     }
 
-    &__menu {}
+    &__menu {
+        display: flex;
+        gap: 40px;
+    }
 
-    &__menu-item {}
+    &__menu-item {
+        padding: 24px 0;
+    }
 
     &__menu-link {
         color: var(--navyblue);
@@ -52,7 +65,10 @@ body {
         font-style: normal;
     }
 
-    &__contact {}
+    &__contact {
+        display: flex;
+        gap: 40px;
+    }
 
     &__contact-item {}
 
@@ -77,21 +93,27 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-right: 76px;
 }
 
 .banner {
     background-color: var(--navyblue);
+    padding: 188px 0;
 
     &__title {
+        max-width: 496px;
         color: var(--white);
         font-size: 56px;
         text-align: center;
         line-height: 1.07;
         letter-spacing: 0.02em;
-        margin-bottom: 48px;
+        margin: 0 auto 48px auto;
     }
 
     &__button {
+        min-width: 169px;
+        height: 56px;
+        display: block;
         color: var(--white);
         font-size: 16px;
         font-weight: 500;
@@ -100,6 +122,9 @@ body {
         border-radius: 4px;
         background-color: var(--iris);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
 
         &:hover,
         &:focus {
@@ -109,10 +134,16 @@ body {
 }
 
 .features {
+    padding: 120px 0;
 
-    &__list {}
+    &__list {
+        display: flex;
+        gap: 24px;
+    }
 
-    &__list-item {}
+    &__list-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
 
     &__item-title {
         color: var(--navyblue);
@@ -140,17 +171,40 @@ body {
     margin-bottom: 72px;
 }
 
+.works {
+    padding-bottom: 120px;
+
+    &__list {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__list-item {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+}
+
 .team {
     background-color: var(--cloud);
+    padding: 120px 0;
 
-    &__list {}
+    &__list {
+        display: flex;
+        gap: 24px;
+    }
 
     &__item {
+        flex-basis: calc((100% - 72px) / 4);
         background-color: var(--white);
+        border-radius: 0 0 4px 4px;
     }
 }
 
 .item-photo {}
+
+.item-info {
+    padding: 32px 16px;
+}
 
 .item-title {
     color: var(--navyblue);
@@ -158,6 +212,7 @@ body {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    text-align: center;
     margin-bottom: 8px;
 }
 
@@ -166,16 +221,24 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .footer {
     background-color: var(--navyblue);
+    padding: 100px 0;
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 16px;
+    }
 
     &__logo-color {
         color: var(--cloud);
     }
 
     &__text {
+        max-width: 264px;
         color: var(--cloud, #F4F4FD);
         font-size: 16px;
         line-height: 1.5;
@@ -185,8 +248,14 @@ body {
 }
 
 .portfolio {
+    padding: 96px 0 120px 0;
 
-    &__filter {}
+    &__filter {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 72px;
+    }
 
     &__filter-item {}
 
@@ -200,11 +269,29 @@ body {
         border: 1px solid var(--cornflower);
         background-color: var(--cloud);
         cursor: pointer;
+        padding: 12px 24px;
 
         &:hover,
         &:focus {
             color: var(--white);
             background-color: var(--ocean);
+            border: 1px solid transparent;
         }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+
+    &__info {
+        border: 1px solid var(--cornflower);
+        border-top: none;
     }
 }
