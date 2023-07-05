@@ -15,6 +15,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 .list {
@@ -29,12 +30,40 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 body {
   font-family: var(--font-primary);
   color: var(--slate);
   background-color: var(--white);
 }
 
+.header {
+  border-bottom: 1px solid var(--cornflower);
+}
 .header__logo-color {
   color: var(--navyblue);
 }
@@ -88,7 +117,9 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  border-radius: 4px;
   background-color: var(--iris);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .banner__button:hover, .banner__button:focus {
   background: var(--ocean);
@@ -161,6 +192,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  border-radius: 4px;
   border: 1px solid var(--cornflower);
   background-color: var(--cloud);
   cursor: pointer;
