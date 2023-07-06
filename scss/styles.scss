@@ -49,6 +49,7 @@ body {
     }
 
     &__menu-link {
+        display: inline-block;
         color: var(--navyblue);
         font-size: 16px;
         font-weight: 500;
@@ -231,6 +232,7 @@ body {
 
     &__logo {
         display: inline-block;
+        margin-right: 0;
         margin-bottom: 16px;
     }
 
@@ -244,7 +246,6 @@ body {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        margin-top: 16px;
     }
 }
 
@@ -294,5 +295,6 @@ body {
     &__info {
         border: 1px solid var(--cornflower);
         border-top: none;
+        text-align-last: left;
     }
 }
